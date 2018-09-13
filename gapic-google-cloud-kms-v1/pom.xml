@@ -20,11 +20,22 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>com.google.api</groupId>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-auth</artifactId>
+      <version>${grpc.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-core</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.google.api</groupId>
+      <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-core-grpc</artifactId>
     </dependency>
     <dependency>
@@ -40,28 +51,26 @@
       <artifactId>grpc-stub</artifactId>
     </dependency>
     <dependency>
-      <groupId>io.grpc</groupId>
-      <artifactId>grpc-auth</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.api</groupId>
+      <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-core</artifactId>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.easymock</groupId>
       <artifactId>easymock</artifactId>
-      <scope>test</scope>
+      <version>${easymock.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.objenesis</groupId>
+          <artifactId>objenesis</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.objenesis</groupId>
       <artifactId>objenesis</artifactId>
+      <version>${objenesis.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -78,7 +87,13 @@
       <groupId>com.google.api</groupId>
       <artifactId>gax-grpc</artifactId>
       <classifier>testlib</classifier>
+      <version>1.31.0</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api</groupId>
+      <artifactId>gax-grpc</artifactId>
+      <version>1.31.0</version>
     </dependency>
   </dependencies>
 </project>
