@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <!--TODO: replace this with your groupId-->
-  <groupId>com.google.api.kms</groupId>
+  <groupId>com.google.kms</groupId>
   <!--TODO: replace this with your artifactId-->
   <artifactId>google-kms-client</artifactId>
   <packaging>pom</packaging>
@@ -35,7 +35,7 @@
     </license>
   </licenses>
   <modules>
-    <module>google-cloud-kms</module>
+    <module>gapic-google-cloud-kms-v1</module>
     <module>grpc-google-cloud-kms-v1</module>
     <module>proto-google-cloud-kms-v1</module>
   </modules>
@@ -70,4 +70,43 @@
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>3.6.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-stub</artifactId>
+      <version>1.13.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-protobuf</artifactId>
+      <version>1.13.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api</groupId>
+      <artifactId>api-common</artifactId>
+      <version>1.7.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api.grpc</groupId>
+      <artifactId>proto-google-common-protos</artifactId>
+      <version>1.12.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api.grpc</groupId>
+      <artifactId>proto-google-iam-v1</artifactId>
+      <version>0.12.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api.grpc</groupId>
+      <artifactId>grpc-google-iam-v1</artifactId>
+      <version>0.12.0</version>
+    </dependency>
+  </dependencies>
 </project>
